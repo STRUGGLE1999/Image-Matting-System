@@ -4,7 +4,8 @@
 ## 2、系统流程：
 实现抠图功能的代码放在demo.py文件中。 
 
-这段代码使用Python和OpenCV库实现图片合成代码。代码中的功能是将两张图片进行合成，其中一张图片是原始的RGB图像，另一张图片是表示透明度的alpha图像。我们挑选了几张代表不同场景下的图片。原始的RGB图像放在 /[original_images](https://github.com/STRUGGLE1999/Intelligent-Image-Matting-System/tree/main/original_images) 文件夹中，alpha图像是使用我们提出的显著性检测网络(PVTANet)检测得到的显著性预测图像，放在 /[alpha_images](https://github.com/STRUGGLE1999/Intelligent-Image-Matting-System/tree/main/alpha_images) 文件夹中。
+这段代码使用Python和OpenCV库实现图片合成代码。代码中的功能是将两张图片进行合成，其中一张图片是原始的RGB图像，另一张图片是表示透明度的alpha图像。
+我们挑选了几张代表不同场景下的图片。原始的RGB图像放在 /[original_images](https://github.com/STRUGGLE1999/Intelligent-Image-Matting-System/tree/main/original_images) 文件夹中，alpha图像是使用我们提出的显著性检测网络(PVTANet)检测得到的显著性预测图像，放在 /[alpha_images](https://github.com/STRUGGLE1999/Intelligent-Image-Matting-System/tree/main/alpha_images) 文件夹中。
 在Alpha图像中，每个像素都有一个额外的通道，通常用于表示该像素的透明度级别。这个额外的通道通常被称为Alpha通道。Alpha通道的取值范围通常是0到255之间，其中0表示完全透明，255表示完全不透明。对于介于0和255之间的值，表示了介于完全透明和完全不透明之间的透明度级别。
 **实现抠图的主要流程为**：
 
